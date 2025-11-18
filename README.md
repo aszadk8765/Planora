@@ -1,11 +1,7 @@
-# Build a Full-Stack Inventory Management System with Next.js & Stack Auth
+# Admin Dashboard with Next.js & Stack Auth
 
 <div align="center">
-<br />
-<a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
-<img width="1280" height="720" alt="Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of 10,000 REACT COMPONENTS (5)" src="https://github.com/user-attachments/assets/f208a5dc-a6b4-4a90-a3ef-93b9dbc23367" />
-</a>
-<br />
+
 <div>
 <img src="https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
 <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
@@ -15,10 +11,8 @@
 <img src="https://img.shields.io/badge/-Stack Auth-FF6B6B?style=for-the-badge&logo=stackauth&logoColor=white" alt="Stack Auth" />
 <img src="https://img.shields.io/badge/-Lucide Icons-FD4D4D?style=for-the-badge&logo=lucide" alt="Lucide Icons" />
 </div>
-<h3 align="center">Create a Complete Inventory Management System with Authentication, Dashboard Analytics, and CRUD Operations</h3>
-<div align="center">
-Follow the full video tutorial on <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank"><b>YouTube</b></a>
-</div>
+
+
 <br />
 </div>
 
@@ -29,18 +23,18 @@ Follow the full video tutorial on <a href="https://youtu.be/YOUR_VIDEO_ID" targe
 3. [Features](#-features)
 4. [Quick Start](#-quick-start)
 5. [Screenshots](#-screenshots)
-6. [Deployment](#-deployment)
-7. [Course & Channel](#-course--channel)
 
 ---
 
 ## 🚀 Introduction
 
-In this comprehensive tutorial, you'll learn how to build a complete **inventory management system** using **Next.js 15**, **Stack Auth**, **Prisma**, and **PostgreSQL**. From user authentication to dashboard analytics, product management, and real-time inventory tracking—this video walks you through every step of building a production-ready full-stack application.
+Planora is a full-stack travel management and booking application built with Next.js, Prisma, PostgreSQL, TailwindCSS, and OpenAI integration.
+It allows users to explore global destinations, browse curated travel packages, and instantly book trips with a clean and modern user interface.
 
-Perfect for developers looking to master modern web development, learn full-stack architecture, or build their own business management tools.
+Designed as an all-in-one personal travel dashboard, Planora helps users manage their past, current, and upcoming international trips with ease — offering real-time insights, automated booking features, and smart AI assistance.
 
-🎥 **Watch the full tutorial**: [YouTube](https://youtu.be/YOUR_VIDEO_ID)
+🎥 Watched a youtube tutorial and created the a similar project but different
+Reference- https://www.youtube.com/watch?v=L5CsIkO5xv4
 
 ---
 
@@ -73,6 +67,7 @@ Perfect for developers looking to master modern web development, learn full-stac
 - 🎨 **Modern UI** - Clean, professional interface with TailwindCSS
 - 🚀 **Server Actions** - Form handling with Next.js Server Actions
 - 🔄 **Real-time Updates** - Instant UI updates after data changes
+- **OpenAI**- Integrated openAI for trip detail search assitance.
 
 ---
 
@@ -82,13 +77,13 @@ Perfect for developers looking to master modern web development, learn full-stac
 
 - [Node.js](https://nodejs.org/) (v18 or higher)
 - [Git](https://git-scm.com/)
-- [PostgreSQL Database](https://www.postgresql.org/) (or use Neon for cloud hosting)
+- [PostgreSQL Database](https://www.postgresql.org/) (Neon)
 
 ### Clone and Run
 
 ```bash
-git clone https://github.com/yourusername/nextjs-fullstack-inventory.git
-cd nextjs-fullstack-inventory
+git clone https://github.com/aszadkhan/planora.git
+cd Planora
 npm install
 ```
 
@@ -101,6 +96,8 @@ DATABASE_URL="postgresql://username:password@localhost:5432/inventory_db"
 NEXT_PUBLIC_STACK_PROJECT_ID="your_stack_project_id"
 NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY="your_publishable_key"
 STACK_SECRET_SERVER_KEY="your_secret_key"
+
+OPENAI_API_KEY=You Key Here
 ```
 
 2. Set up your database:
@@ -116,67 +113,22 @@ npx prisma generate
 npm run dev
 ```
 
-Your app will be available at: [http://localhost:3000](http://localhost:3000)
+The app will be available at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🖼️ Screenshots
 
-> 📸 Add screenshots of your Dashboard, Inventory Management, Add Product form, and Analytics charts here to showcase the application.
 
+<img width="1875" height="917" alt="image" src="https://github.com/user-attachments/assets/a6e2eb04-16de-4402-8059-eec72c801915" />
+<img width="1886" height="748" alt="image" src="https://github.com/user-attachments/assets/1ac70f8c-1720-491f-b0d2-c5aa24bfb175" />
+<img width="1380" height="926" alt="image" src="https://github.com/user-attachments/assets/7db96a3f-8017-471a-92af-fd79681c81ed" />
+<img width="1872" height="813" alt="image" src="https://github.com/user-attachments/assets/a4dd4497-378c-4053-8c9f-2f4ff932adf1" />
+<img width="1817" height="736" alt="image" src="https://github.com/user-attachments/assets/8eb80626-850e-4419-89a1-b6c6ecbc1a59" />
+<img width="1857" height="837" alt="image" src="https://github.com/user-attachments/assets/654fad77-47ac-4b36-acc9-70cf34cae730" />
 ---
 
-## ☁️ Deployment
 
-### Deploy on Vercel
 
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Add your environment variables in the Vercel dashboard
-5. Click **Deploy**
 
-Your live application will be hosted on a custom subdomain (e.g. https://your-inventory-app.vercel.app)
 
-### Database Setup
-
-For production, consider using:
-
-- [Neon](https://neon.tech/) - Serverless PostgreSQL
-- [Supabase](https://supabase.com/) - Open source Firebase alternative
-- [PlanetScale](https://planetscale.com/) - MySQL-compatible database
-
----
-
-## 🎓 Course & Channel
-
-### Learn More with Pedro Technologies
-
-- 🌐 **Course Website**: [www.webdevultra.com](https://www.webdevultra.com)
-- 📺 **YouTube Channel**: [www.youtube.com/@pedrotechnologies](https://www.youtube.com/@pedrotechnologies)
-
-Follow along for more full-stack development tutorials, modern web technologies, and practical coding projects!
-
----
-
-## 🔗 Useful Links
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Stack Auth Documentation](https://docs.stack-auth.com/)
-- [Prisma Documentation](https://www.prisma.io/docs)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Lucide Icons](https://lucide.dev/)
-- [Recharts Documentation](https://recharts.org/)
-- [Vercel Deployment Guide](https://vercel.com/docs)
-
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-**Happy Coding!** 🚀
-
-Let me know if you'd like me to generate a version with your actual GitHub repo, YouTube URL, or banner image suggestions!

@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"  // or sqlite/mysql if you changed it
+  url      = env("DATABASE_URL")
+}
+
+model Trip {
+  id                 String   @id @default(cuid())
+  userId             String
+
+  travelerName       String?          // name of customer
+  destinationCountry String           // e.g. "Italy"
+  destinationCity    String           // e.g. "Rome"
+
+  hotelName          String?          // optional hotel name
+  flightNumber       String?          // optional flight number
+
+  packageType        String           // e.g. "ADVENTURE", "RELAX", etc.
+  startDate          DateTime
+  endDate            DateTime
+
+  totalPrice         Float            // total package price
+  status             String           // "BOOKED" | "UPCOMING" | "COMPLETED" | "CANCELLED"
+
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Destination {
+  id       String  @id @default(cuid())
+  slug     String  @unique          // e.g. "london"
+  name     String                   // e.g. "London"
+  city     String
+  country  String
+  imageUrl String                   // used for the card background
+
+  events   Event[]                  // one-to-many with Event
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Event {
+  id             String      @id @default(cuid())
+  title          String
+  description    String?
+  startTime      DateTime
+  endTime        DateTime
+  availableSeats Int?
+  price          Decimal?
+
+  destination   Destination @relation(fields: [destinationId], references: [id])
+  destinationId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

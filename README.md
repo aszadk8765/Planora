@@ -23,6 +23,7 @@
 3. [Features](#-features)
 4. [Quick Start](#-quick-start)
 5. [Screenshots](#-screenshots)
+6. Role & Responsibility
 
 ---
 
@@ -56,13 +57,12 @@ Reference- https://www.youtube.com/watch?v=L5CsIkO5xv4
 ## ⚡️ Features
 
 - 🔐 **Modern Authentication** - Secure user registration and login with Stack Auth
-- 📊 **Dashboard Analytics** - Real-time metrics, charts, and inventory insights
-- 📦 **Product Management** - Complete CRUD operations for inventory items
+- 📊 **Dashboard Analytics** - Real-time metrics, charts, and trips insights
+- 📦 **Trip Management** - Complete CRUD operations for trips detail
 - 🔍 **Search & Filtering** - Find products quickly with search functionality
-- 📄 **Pagination** - Efficient data loading for large inventories
-- ⚠️ **Low Stock Alerts** - Automated notifications for inventory levels
-- 💰 **Value Tracking** - Monitor total inventory value and financial metrics
-- 📈 **Visual Analytics** - Interactive charts showing inventory trends
+- 📄 **Pagination** - Efficient data loading for large data
+- 💰 **Value Tracking** - Monitor total trips detail and financial metrics
+- 📈 **Visual Analytics** - Interactive charts showing trips trends
 - 📱 **Responsive Design** - Works perfectly on desktop and mobile devices
 - 🎨 **Modern UI** - Clean, professional interface with TailwindCSS
 - 🚀 **Server Actions** - Form handling with Next.js Server Actions
@@ -82,8 +82,8 @@ Reference- https://www.youtube.com/watch?v=L5CsIkO5xv4
 ### Clone and Run
 
 ```bash
-git clone https://github.com/aszadkhan/planora.git
-cd Planora
+git clone https://github.com/2025-Fall-ITE-5425-0TA/project-planora.git
+cd project-planora
 npm install
 ```
 
@@ -92,7 +92,7 @@ npm install
 1. Create a `.env.local` file in the root directory:
 
 ```env
-DATABASE_URL="postgresql://username:password@localhost:5432/inventory_db"
+DATABASE_URL="postgresql://username:password@localhost:5432/dbName"
 NEXT_PUBLIC_STACK_PROJECT_ID="your_stack_project_id"
 NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY="your_publishable_key"
 STACK_SECRET_SERVER_KEY="your_secret_key"
@@ -129,6 +129,42 @@ The app will be available at: [http://localhost:3000](http://localhost:3000)
 ---
 
 
+## Roles & Responsibilities ##
+
+Team Member	Responsibilities
+
+Aszad Khan	• Sign-in page
+		• Sign-up page
+		• Stack authentication
+		• Settings page
+		• AI assistance page
+		• Profile page
+		• Multi-factor authentication (MFA)
+		• Sidebar
+		• Modern UI design
+		• Real-time updates
+		• Integration with Neon Database
+
+Aviral		• Dashboard page
+		• Total trip page
+		• Database integration on Total Trip page
+		• CRUD functionality for trip management
+
+Ritesh		• Destination page
+		• Slug page (dynamic routing)
+		• Pagination functionality
+		• Search and filtering functionality
+
+Dhaval		• Add Trips page
+		• Value tracking
+		• Visual analytics
+		• Responsive design
 
 
+## Credential ##
+User- aszadk@gmail.com
+Password- Web4Aszad
+
+User - aszadk2@gmail.com
+Password- Web2Aszad2
 
